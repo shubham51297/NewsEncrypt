@@ -1,0 +1,9 @@
+{% extends 'mainApp/base/base.html' %}
+{% load static %}
+{% block title %} DASHBOARD {% endblock %}
+{% block body %}
+<div class="h-500 center-v center-h btn-group" style="width:100%">
+<a href="/addSource/{{ username }}"> <button class="button button1"> ADD SOURCE </button> </a>
+<a href="/allMessage/{{ username }}"> <button class="button button1"> VIEW INFORMATION </button> </a>
+</div>
+{% endblock %}

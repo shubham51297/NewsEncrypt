@@ -1,0 +1,21 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'mainApp/styles/Style2.css' %}">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="/login">Home</a>
+  
+</div>
+
+<div class="container">
+  <img src="{% static 'mainApp/images/wallpaper2.jpeg' %}" width=100% height="300" alt="Snow" >
+    <h1 class="centered">{% block title %} {% endblock %}</h1>
+    <div class="centered">ENCRYPTED NEWS CLOUD SOLUTION</div>
+</div>
+{% block body %}{% endblock %}
+</body>
+</html>

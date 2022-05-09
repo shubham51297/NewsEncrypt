@@ -1,0 +1,26 @@
+{% extends 'mainApp/base/base.html' %}
+{% load static %}
+{% block title %} GIVE INFORMATION {% endblock %}
+{% block body %}
+    <form class="container" method="POST">
+        {% csrf_token %}
+        <div>
+        <label>EDITOR</label>
+        <select name="editor" id="editor">
+          {% for result in results %}
+          <option value="{{ result.username }}">{{ result.username }}</option>
+          {% endfor %}
+        </select>
+        </div> 
+        <div>
+          <label>INFORMATION</label>
+          <textarea type="textbox" name="message" rows="4" cols="50">
+          </textarea>
+          </div>
+        </div>
+        
+        <div>
+          <button>ADD INFO</button>
+        </div>
+    </form>
+{% endblock %}

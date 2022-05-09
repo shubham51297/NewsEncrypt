@@ -1,0 +1,10 @@
+{% extends 'mainApp/base/base.html' %}
+{% load static %}
+{% block title %} VIEW DECRYPTED MESSAGE {% endblock %}
+{% block body %}
+{% for result in results %}
+<div class="h-500 center-v center-h btn-group" style="width:100%">
+<a href="/singleMessage/{{ result.id }}"> <button class="button button1"> MESSAGE SOURCE : {{ result.source }} </button> </a>
+</div>
+{% endfor %}
+{% endblock %}

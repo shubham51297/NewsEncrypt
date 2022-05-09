@@ -1,0 +1,22 @@
+{% extends 'mainApp/base/base.html' %}
+{% load static %}
+{% block title %} ADD SOURCE {% endblock %}
+{% block body %}
+    <form class="container" method="POST">
+        {% csrf_token %}
+        <div>
+        <label>USERNAME</label>
+        <input type="text" name="username"></div> 
+        <div>
+          <label>PASSWORD</label>
+          <input type="text" name="password"></div>
+        </div>
+        <div>
+            <label>NAME</label>
+            <input type="text" name="name"></div>
+          </div>
+        <div>
+          <button>Add User</button>
+        </div>
+    </form>
+{% endblock %}

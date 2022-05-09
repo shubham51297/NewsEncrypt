@@ -1,0 +1,10 @@
+{% extends 'mainApp/base/base.html' %}
+{% load static %}
+{% block title %} MESSAGE {% endblock %}
+{% block body %}
+
+<div class="h-500 center-v center-h btn-group" style="width:100%">
+<button class="button button1"> DECRYPTED MESSAGE : {{ plaintext }} </button> 
+</div>
+
+{% endblock %}
