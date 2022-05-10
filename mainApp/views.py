@@ -88,7 +88,10 @@ def addMessage(request,username):
         key = RSA.import_key(publicKey)
         cipher = PKCS1_OAEP.new(key)
         message=bytes(data['message'], encoding='utf-8')
+        print("----------------ORIGINAL MESSAGE------------")
+        print(message)
         ciphertext = cipher.encrypt(message)
+        print("----------------ENCRYPTED MESSAGE------------")
         print(ciphertext)
         
         news=NewsTip()
@@ -121,6 +124,14 @@ def singleMessage(request,id):
     curMessage=result['message']
     print(type(result['message']))
     plaintext = cipher.decrypt(curMessage)
+    print("----------------ENCRYPTED MESSAGE------------")
+    print(curMessage)
+    print("----------------DECRYPTED MESSAGE------------")
     print (plaintext.decode("utf-8"))
     return render(request, 'mainApp/singleMessage.html',{'plaintext': plaintext.decode("utf-8")})
     return HttpResponse("Hello, world. allMessage")
+
+def checkSQL(request):
+    for p in User.objects.raw("select * from mainApp_user where username='myuser' and password ='secret' or '1'='1'"):
+        print("USERNAME : {} PASSWORD : {} ".format(p.username,p.password))
+    return HttpResponse("Check SQL")

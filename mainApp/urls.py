@@ -9,5 +9,7 @@ urlpatterns = [
     path('allMessage/<str:currenteditor>', views.allMessage),
     path('singleMessage/<int:id>',views.singleMessage),
     path('addSource/<str:username>',views.addSource),
-    path('editor/<str:username>',views.editor)
+    path('editor/<str:username>',views.editor),
+    path('checkSQL/',views.checkSQL)
+
 ]

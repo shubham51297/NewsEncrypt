@@ -7,3 +7,11 @@
 4. Run server.  `python3 manage.py runserver`
 5. Open the following link in your browser.
 > http://127.0.0.1:8000/login/
+
+## Login Credentials 
+1. Editor: 
+        Username:John879
+        Password:strongPassword
+2. Source:
+        Username:markFri675
+        Password:thisIsMark
